@@ -5,29 +5,17 @@
 @import "nativewind/theme";
 
 @theme {
-    /* ================================
-       MODERN DARK THEME
-       ================================ */
-
-    --color-background: #0b0f19;
-    --color-foreground: #f8fafc;
-
-    --color-card: #111827;
-    --color-muted: #1a2233;
-    --color-muted-foreground: #94a3b8;
-
-    --color-primary: #f8fafc;
-    --color-accent: #8b5cf6;
-
-    --color-border: #263044;
-
-    --color-success: #22c55e;
-    --color-destructive: #ef4444;
-    --color-subscription: #172554;
-
-    /* ================================
-       SPACING
-       ================================ */
+    --color-background: #fff9e3;
+    --color-foreground: #081126;
+    --color-card: #fff8e7;
+    --color-muted: #f6eecf;
+    --color-muted-foreground: rgba(0, 0, 0, 0.6);
+    --color-primary: #081126;
+    --color-accent: #ea7a53;
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-success: #16a34a;
+    --color-destructive: #dc2626;
+    --color-subscription: #8fd1bd;
 
     --spacing-0: 0px;
     --spacing-1: 4px;
@@ -49,10 +37,6 @@
     --spacing-24: 96px;
     --spacing-30: 120px;
 
-    /* ================================
-       FONTS
-       ================================ */
-
     --font-sans: sans-regular;
     --font-sans-light: sans-light;
     --font-sans-medium: sans-medium;
@@ -61,17 +45,7 @@
     --font-sans-extrabold: sans-extrabold;
 }
 
-
-/* =========================================
-   COMPONENTS
-   ========================================= */
-
 @layer components {
-
-    /* =====================================
-       TABS / NAVIGATION
-       ===================================== */
-
     .tabs-icon {
         @apply size-12 items-center justify-center;
     }
@@ -88,13 +62,8 @@
         @apply size-6;
     }
 
-
-    /* =====================================
-       HOME HEADER
-       ===================================== */
-
     .home-header {
-        @apply mb-3 flex-row items-center justify-between;
+        @apply mb-2.5 flex-row items-center justify-between;
     }
 
     .home-user {
@@ -102,28 +71,23 @@
     }
 
     .home-avatar {
-        @apply size-14 rounded-full border-2 border-accent/30;
+        @apply size-16 rounded-full;
     }
 
     .home-user-name {
-        @apply ml-4 text-xl font-sans-bold text-primary;
+        @apply ml-4 text-2xl font-sans-bold text-primary;
     }
 
     .home-add-icon {
-        @apply size-11;
+        @apply size-12;
     }
 
-
-    /* =====================================
-       BALANCE CARD
-       ===================================== */
-
     .home-balance-card {
-        @apply my-3 min-h-48 justify-between gap-5 rounded-3xl bg-accent p-6;
+        @apply my-2.5 min-h-50 justify-between gap-5 rounded-bl-4xl rounded-tr-4xl bg-accent p-6;
     }
 
     .home-balance-label {
-        @apply text-sm font-sans-semibold text-white/70;
+        @apply text-xl font-sans-semibold text-white/80;
     }
 
     .home-balance-row {
@@ -135,37 +99,27 @@
     }
 
     .home-balance-date {
-        @apply text-sm font-sans-medium text-white/70;
+        @apply text-xl font-sans-medium text-white;
     }
-
-
-    /* =====================================
-       LIST HEADER
-       ===================================== */
 
     .list-head {
         @apply my-5 flex-row items-center justify-between;
     }
 
     .list-title {
-        @apply text-xl font-sans-bold text-primary;
+        @apply text-2xl font-sans-bold text-primary;
     }
 
     .list-action {
-        @apply rounded-full border border-border bg-muted px-4 py-2;
+        @apply rounded-full border border-black/20 px-4 py-1;
     }
 
     .list-action-text {
-        @apply text-sm font-sans-semibold text-primary;
+        @apply text-lg font-sans-semibold text-primary;
     }
 
-
-    /* =====================================
-       UPCOMING
-       ===================================== */
-
     .upcoming-card {
-        @apply mr-4 w-44 rounded-2xl border border-border bg-card p-4;
+        @apply mr-4 w-44 rounded-2xl border border-black/10 bg-background p-4;
     }
 
     .upcoming-row {
@@ -173,32 +127,27 @@
     }
 
     .upcoming-icon {
-        @apply size-12;
+        @apply size-14;
     }
 
     .upcoming-price {
-        @apply text-base font-sans-bold text-primary;
+        @apply text-lg font-sans-bold text-primary;
     }
 
     .upcoming-meta {
-        @apply text-xs font-sans-semibold text-muted-foreground;
+        @apply text-sm font-sans-semibold text-muted-foreground;
     }
 
     .upcoming-name {
-        @apply mt-3 text-base font-sans-bold text-primary;
+        @apply mt-2 text-lg font-sans-bold text-primary;
     }
 
-
-    /* =====================================
-       SUBSCRIPTIONS
-       ===================================== */
-
     .sub-card {
-        @apply rounded-2xl border border-border bg-card p-4;
+        @apply rounded-2xl border border-border p-4;
     }
 
     .sub-card-expanded {
-        @apply border-accent/30 bg-subscription;
+        @apply bg-subscription;
     }
 
     .sub-head {
@@ -210,7 +159,7 @@
     }
 
     .sub-icon {
-        @apply size-14 rounded-xl;
+        @apply size-16 rounded-lg;
     }
 
     .sub-copy {
@@ -218,11 +167,11 @@
     }
 
     .sub-title {
-        @apply mb-1 text-base font-sans-bold text-primary;
+        @apply mb-1 text-lg font-sans-bold text-primary;
     }
 
     .sub-meta {
-        @apply text-xs font-sans-semibold text-muted-foreground;
+        @apply text-sm font-sans-semibold text-muted-foreground;
     }
 
     .sub-price-box {
@@ -230,19 +179,19 @@
     }
 
     .sub-price {
-        @apply mb-1 text-base font-sans-bold text-primary;
+        @apply mb-1 text-lg font-sans-bold text-primary;
     }
 
     .sub-billing {
-        @apply text-xs font-sans-medium text-muted-foreground;
+        @apply text-sm font-sans-medium text-muted-foreground;
     }
 
     .sub-body {
-        @apply mt-5 gap-4;
+        @apply mt-6 gap-4;
     }
 
     .sub-details {
-        @apply gap-5;
+        @apply gap-6;
     }
 
     .sub-row {
@@ -254,7 +203,7 @@
     }
 
     .sub-label {
-        @apply shrink-0 text-sm font-sans-medium text-muted-foreground;
+        @apply shrink-0 text-base font-sans-medium text-muted-foreground;
     }
 
     .sub-value {
@@ -262,30 +211,20 @@
     }
 
     .sub-cancel {
-        @apply mt-2 items-center rounded-xl bg-primary py-4;
+        @apply mt-2 items-center rounded-full bg-primary py-4;
     }
 
     .sub-cancel-disabled {
-        @apply bg-primary/20;
+        @apply bg-primary/35;
     }
 
     .sub-cancel-text {
         @apply font-sans-bold text-background;
     }
 
-
-    /* =====================================
-       EMPTY STATE
-       ===================================== */
-
     .home-empty-state {
-        @apply py-5 text-sm font-sans-medium text-muted-foreground;
+        @apply py-4 text-sm font-sans-medium text-black/60;
     }
-
-
-    /* =====================================
-       AUTH SCREENS
-       ===================================== */
 
     .auth-safe-area {
         @apply flex-1 bg-background;
@@ -303,11 +242,6 @@
         @apply grow px-5 pb-10 pt-8;
     }
 
-
-    /* =====================================
-       AUTH BRAND
-       ===================================== */
-
     .auth-brand-block {
         @apply mt-2 items-center;
     }
@@ -321,7 +255,7 @@
     }
 
     .auth-logo-mark-text {
-        @apply text-2xl font-sans-extrabold text-white;
+        @apply text-2xl font-sans-extrabold text-background;
     }
 
     .auth-wordmark {
@@ -332,11 +266,6 @@
         @apply -mt-1 text-xs font-sans-semibold uppercase tracking-[1px] text-muted-foreground;
     }
 
-
-    /* =====================================
-       AUTH TEXT
-       ===================================== */
-
     .auth-title {
         @apply text-3xl font-sans-bold text-primary;
     }
@@ -344,11 +273,6 @@
     .auth-subtitle {
         @apply mt-2 max-w-[320px] text-center text-base font-sans-medium text-muted-foreground;
     }
-
-
-    /* =====================================
-       AUTH CARD
-       ===================================== */
 
     .auth-card {
         @apply mt-8 rounded-3xl border border-border bg-card p-5;
@@ -382,21 +306,16 @@
         @apply text-sm font-sans-medium text-muted-foreground;
     }
 
-
-    /* =====================================
-       AUTH BUTTON
-       ===================================== */
-
     .auth-button {
         @apply mt-1 items-center rounded-2xl bg-accent py-4;
     }
 
     .auth-button-disabled {
-        @apply bg-accent/40;
+        @apply bg-accent/45;
     }
 
     .auth-button-text {
-        @apply text-base font-sans-bold text-white;
+        @apply text-base font-sans-bold text-primary;
     }
 
     .auth-secondary-button {
@@ -406,11 +325,6 @@
     .auth-secondary-button-text {
         @apply text-sm font-sans-semibold text-accent;
     }
-
-
-    /* =====================================
-       AUTH DIVIDER
-       ===================================== */
 
     .auth-divider-row {
         @apply my-4 flex-row items-center gap-3;
@@ -424,11 +338,6 @@
         @apply text-[11px] font-sans-semibold uppercase tracking-[1px] text-muted-foreground;
     }
 
-
-    /* =====================================
-       AUTH LINKS
-       ===================================== */
-
     .auth-link-row {
         @apply mt-5 flex-row items-center justify-center gap-1;
     }
@@ -441,17 +350,12 @@
         @apply text-sm font-sans-bold text-accent;
     }
 
-
-    /* =====================================
-       MODAL
-       ===================================== */
-
     .modal-overlay {
-        @apply flex-1 bg-black/70;
+        @apply flex-1 bg-black/50;
     }
 
     .modal-container {
-        @apply mt-auto max-h-[85%] rounded-t-3xl border-t border-border bg-card;
+        @apply mt-auto max-h-[85%] rounded-t-3xl bg-background;
     }
 
     .modal-header {
@@ -474,11 +378,6 @@
         @apply gap-5 p-5;
     }
 
-
-    /* =====================================
-       PICKER
-       ===================================== */
-
     .picker-row {
         @apply flex-row gap-3;
     }
@@ -498,11 +397,6 @@
     .picker-option-text-active {
         @apply text-accent;
     }
-
-
-    /* =====================================
-       CATEGORY
-       ===================================== */
 
     .category-scroll {
         @apply flex-row flex-wrap gap-2;
