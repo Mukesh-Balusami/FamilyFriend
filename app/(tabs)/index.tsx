@@ -13,10 +13,10 @@ export default function App() {
       </Text>
 
       <Link href={{pathname: "/bills/[id]", params: { id: "current" } }} className="rounded-lg bg-blue-500">
-        <Text className="text-lg text-blue-500"> View Current Bill Details</Text>
+        <Text className="text-lg text-teal-500">View Current Bill Details</Text>
       </Link>
       <Link href={{ pathname: "/bills/[id]", params: { id: "Gas" } }} className="rounded-lg bg-blue-500">
-        <Text className="text-lg text-blue-500">View Gas Bill Details</Text>
+        <Text className="text-lg text-teal-500">View Gas Bill Details</Text>
       </Link>
     </SafeAreaView>
   );
