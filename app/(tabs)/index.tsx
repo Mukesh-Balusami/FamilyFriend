@@ -8,8 +8,8 @@ const SafeAreaView = styled(BMKSafeAeaView);
 export default function App() {
   return (
     <SafeAreaView className="flex-1 bg-background p-5">
-      <Text className="text-xl font-bold text-blue-500">
-        Welcome to Nativewind!
+      <Text className="text-7xl font-sans-extrabold text-blue-800">
+        Home
       </Text>
 
       <Link href={{pathname: "/bills/[id]", params: { id: "current" } }} className="rounded-lg bg-blue-500">
